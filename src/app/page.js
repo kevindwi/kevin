@@ -13,9 +13,6 @@ import Footer from '@/components/Footer'
 
 import AnimateOnScroll from '@/utils/AnimateOnScroll'
 
-import hero_content from '@/data/hero_content.xlsx';
-import project_content from '@/data/project_content.xlsx';
-
 export default function Home() {
   const [content, setContent] = useState({});
 
@@ -26,8 +23,6 @@ export default function Home() {
     const project = utils.sheet_to_json(wb.Sheets[wb.SheetNames[1]]); 
     setContent({hero, project});
   })(); }, []);
-
-  // console.log(content)
 
   return (
     <main className=" px-10 lg:px-28">
